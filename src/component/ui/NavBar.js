@@ -21,6 +21,30 @@ const NavBar = (p) => {
               home
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/validation"
+              className={({ isActive }) => (isActive ? c.activeLink : c.link)}
+            >
+              validation
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/download"
+              className={({ isActive }) => (isActive ? c.activeLink : c.link)}
+            >
+              download
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/analytics"
+              className={({ isActive }) => (isActive ? c.activeLink : c.link)}
+            >
+              analytics
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>
