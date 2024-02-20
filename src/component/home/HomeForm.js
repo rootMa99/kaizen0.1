@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import c from "./HomeForm.module.css";
 import Select from "react-select";
 const customStyles = {
@@ -82,9 +82,49 @@ const statusC = [
 ];
 
 const HomeForm = () => {
+  const [dataform, setDatafrom] = useState({
+    matricule: "",
+    matriculeCm: "",
+    matriculeSl: "",
+    zone: "",
+    equipe: "",
+    responsable: "",
+    problem: "",
+    solution: "",
+  });
   const handleSubmit = (event) => {
     event.preventDefault();
     // Add your login logic here
+  };
+
+  const onChangehandler = (e, t) => {
+    switch (t) {
+      case "problem":
+        setDatafrom((prev) => ({ ...prev, problem: e.target.value }));
+        break;
+      case "matricule":
+        setDatafrom((prev) => ({ ...prev, matricule: e.target.value }));
+        break;
+      case "matriculeCm":
+        setDatafrom((prev) => ({ ...prev, matriculeCm: e.target.value }));
+        break;
+      case "matriculeSl":
+        setDatafrom((prev) => ({ ...prev, matriculeSl: e.target.value }));
+        break;
+      case "zone":
+        setDatafrom((prev) => ({ ...prev, zone: e.value }));
+        break;
+      case "equipe":
+        setDatafrom((prev) => ({ ...prev, equipe: e.value }));
+        break;
+      case "responsable":
+        setDatafrom((prev) => ({ ...prev, responsable: e.value }));
+        break;
+      case "solution":
+        setDatafrom((prev) => ({ ...prev, solution: e.target.value }));
+        break;
+      default:
+    }
   };
 
   return (
@@ -98,18 +138,21 @@ const HomeForm = () => {
           placeholder="Matricule (Operateur)"
           className={`${c.username} ${c.input}`}
           type="text"
+          onChange={e=>onChangehandler(e, "matricule")}
           required
         />
         <input
           placeholder="Matricule (ContreMaitre)"
           className={`${c.password} ${c.input}`}
           type="text"
+          onChange={e=>onChangehandler(e, "matriculeCm")}
           required
         />
         <input
           placeholder="Matricule (Shef De Shift)"
           className={`${c.password} ${c.input}`}
           type="text"
+          onChange={e=>onChangehandler(e, "matriculeSl")}
           required
         />
         <div className={c.select}>
@@ -119,10 +162,11 @@ const HomeForm = () => {
             inputId="shiftleader1"
             styles={customStyles}
             defaultValue={{
-                value: "zone",
-                label: "zone",
-              }}
+              value: "zone",
+              label: "zone",
+            }}
             menuPlacement="top"
+            onChange={e=>onChangehandler(e, "zone")}
           />
         </div>
         <div className={c.select}>
@@ -132,10 +176,11 @@ const HomeForm = () => {
             inputId="shiftleader1"
             styles={customStyles}
             defaultValue={{
-                value: "Equipe",
-                label: "Equipe",
-              }}
+              value: "Equipe",
+              label: "Equipe",
+            }}
             menuPlacement="top"
+            onChange={e=>onChangehandler(e, "equipe")}
           />
         </div>
         <div className={c.select}>
@@ -145,10 +190,11 @@ const HomeForm = () => {
             inputId="shiftleader1"
             styles={customStyles}
             defaultValue={{
-                value: "Responsable",
-                label: "Responsable",
-              }}
+              value: "Responsable",
+              label: "Responsable",
+            }}
             menuPlacement="top"
+            onChange={e=>onChangehandler(e, "responsable")}
           />
         </div>
         <textarea
@@ -159,6 +205,7 @@ const HomeForm = () => {
           name="textarea96"
           placeholder="Problem"
           className={`${c.password} ${c.input}`}
+          onChange={e=>onChangehandler(e, "problem")}
         ></textarea>
         <textarea
           required
@@ -168,6 +215,7 @@ const HomeForm = () => {
           name="textarea96"
           placeholder="Solution"
           className={`${c.password} ${c.input}`}
+          onChange={e=>onChangehandler(e, "solution")}
         ></textarea>
         <button className={c.btn} type="submit">
           Submit
