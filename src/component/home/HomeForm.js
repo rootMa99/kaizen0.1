@@ -129,6 +129,9 @@ const HomeForm = () => {
 
   return (
     <div className={c.container}>
+    
+
+
       <form className={c.form} onSubmit={handleSubmit}>
         <p className={c.title}>kaizen:</p>
         <p className={c.titles}>

@@ -12,7 +12,7 @@
 .form {
   width: 90%;
   height: auto;
-  background-image: linear-gradient(to bottom, #424242, #212121);
+  background-image: linear-gradient(to bottom, #424242, #000);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -25,7 +25,7 @@
   color: #f5deb3;
   margin: 0;
   margin-bottom: 0.3rem;
-  font-size: 2rem;
+  font-size: 4rem;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -34,7 +34,7 @@
   font-size: 1.2rem;
   margin-bottom: 1rem;
   width: 62%;
-  font-weight: 100;
+  font-weight: 400;
   text-transform: capitalize;
 }
 
