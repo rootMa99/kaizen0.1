@@ -94,7 +94,7 @@ const HomeForm = () => {
   });
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Add your login logic here
+    console.log(dataform)
   };
 
   const onChangehandler = (e, t) => {
