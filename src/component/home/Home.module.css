@@ -8,7 +8,29 @@
     min-height: 30rem;
 }
 .storyContainer{
-    background-color: blue;
+    /* background:url("../../assets/Create.gif"); */
     width: 40%;
     height: 30rem;
+    position: relative;
 }
+
+.bgsq{
+    width: 100%;
+    transform: rotate(1deg);
+}
+
+.bgs{
+    position: absolute;
+    top: -10rem;
+    right: -10rem;
+    width: 156%;
+    padding: 0;
+
+}
+/* @media (height <= 910px) {
+    .bgs{
+        width: 58rem;
+        padding: 0;
+    
+    }
+  } */

@@ -19,11 +19,10 @@ const customStyles = {
     backgroundColor: "transparent",
     boxShadow: "none",
     margin: "auto",
-    
+
     "&:hover": {
       border: "1px solid transparent",
       cursor: "pointer",
-    
     },
   }),
   option: (provided, state) => ({
@@ -119,10 +118,57 @@ const HomeForm = () => {
             id="multiSelect"
             inputId="shiftleader1"
             styles={customStyles}
-            defaultValue={" "}
+            defaultValue={{
+                value: "zone",
+                label: "zone",
+              }}
             menuPlacement="top"
           />
         </div>
+        <div className={c.select}>
+          <Select
+            options={statusC}
+            id="multiSelect"
+            inputId="shiftleader1"
+            styles={customStyles}
+            defaultValue={{
+                value: "Equipe",
+                label: "Equipe",
+              }}
+            menuPlacement="top"
+          />
+        </div>
+        <div className={c.select}>
+          <Select
+            options={statusC}
+            id="multiSelect"
+            inputId="shiftleader1"
+            styles={customStyles}
+            defaultValue={{
+                value: "Responsable",
+                label: "Responsable",
+              }}
+            menuPlacement="top"
+          />
+        </div>
+        <textarea
+          required
+          cols="25"
+          rows="5"
+          id="textarea"
+          name="textarea96"
+          placeholder="Problem"
+          className={`${c.password} ${c.input}`}
+        ></textarea>
+        <textarea
+          required
+          cols="25"
+          rows="5"
+          id="textarea"
+          name="textarea96"
+          placeholder="Solution"
+          className={`${c.password} ${c.input}`}
+        ></textarea>
         <button className={c.btn} type="submit">
           Submit
         </button>

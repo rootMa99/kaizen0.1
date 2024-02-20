@@ -22,7 +22,7 @@
 
 .title,
 .titles {
-  color: wheat;
+  color: #f5deb3;
   margin: 0;
   margin-bottom: 0.3rem;
   font-size: 2rem;
@@ -68,7 +68,7 @@
   font-size: 1.2rem;
   transition: all 400ms;
   cursor: pointer;
-  box-shadow: 0 0 10px antiquewhite, 0 0 10px antiquewhite;
+  box-shadow: 0 0 10px #faebd7, 0 0 10px ;
 }
 
 .btn:hover {
