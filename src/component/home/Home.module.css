@@ -27,10 +27,10 @@
     padding: 0;
 
 }
-/* @media (height <= 910px) {
+@media (height <= 910px) {
     .bgs{
-        width: 58rem;
+        width: 55rem;
         padding: 0;
     
     }
-  } */
+  }
